@@ -15,7 +15,7 @@ SELECT department_referral, AVG(patient_waittime) AS avg_wait_time
 FROM dbo.hospital_ER
 GROUP BY department_referral;
 
---Percentage of Patient with Admin Flag
+--Percentage of Patients with Admin Flag
 
 SELECT patient_admin_flag, COUNT(*) AS count
 FROM dbo.hospital_ER
@@ -37,14 +37,14 @@ GROUP BY patient_sat_score
 ORDER BY patient_sat_score;
 
 
---Average Age of Patient by Race
+--Average Age of Patients by Race
 
 SELECT patient_race, AVG(patient_age) AS avg_age
 FROM dbo.hospital_ER
 GROUP BY patient_race;
 
 
---Patient with High Satisfaction Score by Gender
+--Patients with High Satisfaction Score by Gender
 
 SELECT patient_gender, COUNT(*) AS count
 FROM dbo.hospital_ER
@@ -52,7 +52,7 @@ WHERE patient_sat_score >= 8
 GROUP BY patient_gender;
 
 
---Avergae Patient Age and Wait Time for Admin Flagged Patients
+--Average Patient Age and Wait Time for Admin Flagged Patients
 
 SELECT patient_admin_flag, AVG(patient_age) AS avg_age, AVG(patient_waittime) AS avg_wait_time
 FROM dbo.hospital_ER
